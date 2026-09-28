@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emirhan Tayiz | Yazılım &amp; Teknoloji</title>
+<meta name="description" content="Emirhan Tayiz - Bilişim Teknolojileri öğrencisi, kişisel portfolyo sitesi.">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0d1117;
+    --surface: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --good: #3fb950;
+    --mid: #d29922;
+    --basic: #8b949e;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+  /* Üst kısım */
+  header { border-bottom: 1px solid var(--border); background: var(--surface); }
+  .top { display: flex; align-items: center; gap: 20px; padding: 40px 0 32px; }
+  .avatar {
+    flex: none; width: 88px; height: 88px; border-radius: 50%;
+    background: var(--bg); border: 1px solid var(--border);
+    display: grid; place-items: center;
+    font-size: 30px; font-weight: 600; color: var(--accent);
+  }
+  h1 { margin: 0; font-size: 30px; line-height: 1.25; font-weight: 600; }
+  .title { margin: 2px 0 0; color: var(--muted); font-size: 18px; }
+  .school { margin: 8px 0 0; font-size: 14px; color: var(--muted); }
+  nav { border-top: 1px solid var(--border); }
+  nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 4px; overflow-x: auto; }
+  nav a { display: block; padding: 12px 12px; color: var(--muted); font-size: 14px; white-space: nowrap; }
+  nav a:hover { color: var(--text); text-decoration: none; }
+
+  /* Bölümler */
+  section { padding: 40px 0 8px; }
+  h2 {
+    margin: 0 0 16px; padding-bottom: 8px;
+    font-size: 22px; font-weight: 600;
+    border-bottom: 1px solid var(--border);
+  }
+  p { margin: 0 0 12px; max-width: 68ch; }
+
+  /* Yetenekler */
+  .skill-group { margin-bottom: 20px; }
+  h3 { margin: 0 0 10px; font-size: 15px; font-weight: 600; color: var(--muted); }
+  .skills { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+  .skills li {
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    padding: 10px 14px; background: var(--surface);
+    border: 1px solid var(--border); border-radius: 6px;
+  }
+  .level { font-size: 13px; display: inline-flex; align-items: center; gap: 6px; color: var(--muted); }
+  .level::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--basic); }
+  .level.good::before { background: var(--good); }
+  .level.mid::before { background: var(--mid); }
+
+  /* Projeler */
+  .projects { display: grid; gap: 16px; }
+  .project {
+    padding: 16px 18px; background: var(--surface);
+    border: 1px solid var(--border); border-radius: 6px;
+  }
+  .project h3 { margin: 0 0 6px; font-size: 17px; color: var(--accent); }
+  .project p { margin: 0 0 12px; color: var(--text); font-size: 15px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+  .tags li {
+    font-size: 12px; padding: 2px 10px; border-radius: 999px;
+    border: 1px solid var(--border); color: var(--muted);
+  }
+  .status { font-size: 13px; color: var(--muted); margin: 0 0 8px; }
+
+  /* İletişim */
+  .contact { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .contact li { display: flex; gap: 12px; }
+  .contact span { width: 80px; flex: none; color: var(--muted); }
+
+  footer { margin-top: 48px; padding: 20px 0 32px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; }
+
+  @media (max-width: 520px) {
+    .top { flex-direction: column; align-items: flex-start; padding: 28px 0 24px; gap: 14px; }
+    h1 { font-size: 26px; }
+    .title { font-size: 16px; }
+    .contact li { flex-direction: column; gap: 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="top">
+      <div class="avatar" aria-hidden="true">ET</div>
+      <div>
+        <h1>Emirhan Tayiz</h1>
+        <p class="title">Yazılım &amp; Teknoloji</p>
+        <p class="school">Kayseri Merkez Mesleki ve Teknik Anadolu Lisesi · Bilişim Teknolojileri · 12. sınıf</p>
+      </div>
+    </div>
+  </div>
+  <nav aria-label="Bölümler">
+    <div class="wrap">
+      <ul>
+        <li><a href="#hakkimda">Hakkımda</a></li>
+        <li><a href="#yetenekler">Yetenekler</a></li>
+        <li><a href="#projeler">Projeler</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <!-- DEĞİŞTİR: Hakkımda metnini kendine göre düzenle -->
+  <section id="hakkimda">
+    <h2>Hakkımda</h2>
+    <p>Kayseri Merkez Mesleki ve Teknik Anadolu Lisesi'nde Bilişim Teknolojileri bölümünde 12. sınıf öğrencisiyim. Yazılım ve elektronik ile uğraşmayı seviyorum; okulda ve kendi başıma web, robotik ve mobil uygulama projeleri geliştirdim.</p>
+    <p>Şu an staj yapabileceğim bir yer arıyorum. Yeni şeyler öğrenmeye açığım ve bir işi baştan sona kendim bitirmeyi önemsiyorum.</p>
+  </section>
+
+  <!-- DEĞİŞTİR: Seviyeleri ve listeyi kendine göre güncelle. Seviye sınıfları: good (iyi), mid (orta), boş bırakırsan "temel" görünür -->
+  <section id="yetenekler">
+    <h2>Yetenekler</h2>
+
+    <div class="skill-group">
+      <h3>Diller</h3>
+      <ul class="skills">
+        <li>HTML <span class="level good">İyi</span></li>
+        <li>CSS <span class="level mid">Orta</span></li>
+        <li>JavaScript <span class="level mid">Orta</span></li>
+        <li>Kotlin <span class="level">Temel</span></li>
+      </ul>
+    </div>
+
+    <div class="skill-group">
+      <h3>Araçlar</h3>
+      <ul class="skills">
+        <li>Arduino</li>
+        <li>Android Studio</li>
+        <li>Git &amp; GitHub</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DEĞİŞTİR: Proje açıklamalarını ve teknoloji etiketlerini gerçek bilgilerle güncelle -->
+  <section id="projeler">
+    <h2>Projelerim</h2>
+    <div class="projects">
+
+      <article class="project">
+        <h3>Deprem Tatbikat ve Kapı Kontrol Sistemi</h3>
+        <p>Deprem anında binadaki tüm kapıları otomatik açarak tahliyeyi hızlandıran bir sistem. Depremden sonra hırsızlığı önlemek için kapılar uzaktan kumanda ile kontrol edilebiliyor.</p>
+        <ul class="tags" aria-label="Kullanılan teknolojiler">
+          <li>Arduino</li>
+          <li>Sensörler</li>
+          <li>Uzaktan kontrol</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <h3>Mini Sumo Robot</h3>
+        <p>17. MEB Robot Yarışması'nda mini sumo kategorisinde yarışan robot. Önde ve yan taraflarda bulunan sensörlerle rakibi algılayıp ringde kalacak şekilde hareket ediyor.</p>
+        <ul class="tags" aria-label="Kullanılan teknolojiler">
+          <li>Arduino</li>
+          <li>Mesafe sensörleri</li>
+          <li>Robotik</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <h3>Oyun Güncelleme Takip Uygulaması</h3>
+        <p class="status">Geliştiriliyor</p>
+        <p>Oyunlara gelecek güncellemeleri ve hangi güncellemenin hangi gün, hangi saatte çıkacağını takip etmeyi sağlayan bir Android uygulaması.</p>
+        <ul class="tags" aria-label="Kullanılan teknolojiler">
+          <li>Kotlin</li>
+          <li>Android Studio</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- DEĞİŞTİR: Gerçek mail, telefon ve GitHub kullanıcı adını yaz -->
+  <section id="iletisim">
+    <h2>İletişim</h2>
+    <ul class="contact">
+      <li><span>E-posta</span> <a href="mailto:ornek@mail.com">emirtayiz123@gmail.com</a></li>
+      <li><span>Telefon</span> <a href="tel:+905000000000">0 535 508 10 18</a></li>
+      <li><span>GitHub</span> <a href="https://github.com/emirty-hub" target="_blank" rel="noopener">https://github.com/emirty-hub</a></li>
+      <li><span>Konum</span> Kayseri</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Emirhan Tayiz</div>
+</footer>
+
+</body>
+</html>
